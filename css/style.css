@@ -24,9 +24,18 @@ html{
 /*AGREGAR ESTA PARTE Al inicio de  TODOS LOS ARCHIVOS CSS*/
 /* usar rem como unidad de edida para las dimensiones no spermite tener un mejor control del tamaño*/
 body{
+  font-size: 1.6rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color: var(--color-muted);
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabin', 'Actor', sans-serif;
+  text-transform: uppercase;
+}
+p{
+  font-family: 'Didact Gothic', sans-serif;
+}
+
 .container{
   width: 95%;
   background-color: var(--color-principal);
@@ -48,7 +57,8 @@ header{
 }
 .navbar{
   justify-content: end;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-family: 'Cabin', 'Actor', sans-serif;
   text-transform: uppercase;
 }
 .nav-link{
