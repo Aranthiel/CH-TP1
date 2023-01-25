@@ -2,9 +2,10 @@
   --color-principal:#6fad3e;
   --color-contraste: #F0A202;
   --color-muted:#1D263B;
-  --color-texto: #221D23;
+  --color-texto: #1d1d1d;
   --color-claro:#EDFFEC;
-  --color-traslucido:rgba(255, 255, 255, 0.25);  
+  --color-traslucido:rgba(255, 255, 255, 0.25);
+  --color-contraste-traslucido:rgba(240,162,2,0.35);  
 
   --fuente-titulos:  'Poppins', sans-serif;
   --fuente-italic:  'Poppins', sans-serif;
@@ -76,6 +77,54 @@ main {
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
+
+.banner{
+  width:100%;
+  height: 25rem; 
+  overflow: hidden;
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+  
+}
+ .mainBanner {
+  object-fit: cover;
+  width:100%;
+  height: 25rem; 
+  filter: grayscale(1);
+  position: relative;
+ }
+ .mainBanner:hover{ 
+  /*cuando el cursor pasa por el texto se pierde el efecto hover 
+  ¿como se soluciona?*/
+  filter: none;
+ }
+.txtBanner{
+  color: var(--color-principal);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  transition: 0.5s;
+}
+.txtBanner h2{
+  font-size: 5rem;
+  font-weight: 900;
+  /* text-shadow: 2px 2px 1px rgb(240,162,2); */
+  text-shadow: 3px 3px 1px rgb(19, 19, 19);
+}
+/* hacer hover a un elemento y aplicar efecto sobre otro elemento*/
+/*tutorial https://www.youtube.com/watch?v=UeQyNsX-23E*/
+
+ 
+
+
+.historiaHub{
+  margin-top:2rem;
+  border: 2px solid var(--color-contraste)
+}
+
 
 aside {
   grid-area: lateral;
