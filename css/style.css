@@ -151,46 +151,6 @@ main {
 /* hacer hover a un elemento y aplicar efecto sobre otro elemento*/
 /*tutorial https://www.youtube.com/watch?v=UeQyNsX-23E*/
 
-.historiaHub{
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-  "titulo titulo"
-  "foto textof"
-  "texto texto";
-  column-gap: 1.5rem;
-}
-.historiaTitulo{
-  grid-area: titulo;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
-}
-.historiaImg{
-  grid-area: foto;
-  width:100%; 
-  height: 22.5rem;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
-}
- 
-.historiaImgCover {
-  /* en 1398px pierde la linea con el segundo py la recupera en 992 con @mediaScreen y se rompe debajo de los 400px*/
-  object-fit: cover;
-  object-position: 0 0;
-  width:100%;
-  height: 100%;
-  min-height: 25rem; 
-  position: relative;
- }
-.historiaTxt1{
-  grid-area: textof;
-}
-.historiaTxt2{
-  grid-area: texto;
-}
 aside {
   grid-area: lateral;
   background-color: var(--color-contraste);
@@ -248,9 +208,116 @@ footer h5{
   font-size: 1.2rem;
   font-weight: 700;
 }
+ 
+/*ESTILOS DE LA PAGINA INDEX*/
+
+.historiaHub{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "titulo titulo"
+  "foto textof"
+  "texto texto";
+  column-gap: 1.5rem;
+}
+.historiaTitulo{
+  grid-area: titulo;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+.historiaImg{
+  grid-area: foto;
+  width:100%; 
+  height: 22.5rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+ 
+.historiaImgCover {
+  /* en 1398px pierde la linea con el segundo py la recupera en 992 con @mediaScreen y se rompe debajo de los 400px*/
+  object-fit: cover;
+  object-position: 0 0;
+  width:100%;
+  height: 100%;
+  min-height: 25rem; 
+  position: relative;
+ }
+.historiaTxt1{
+  grid-area: textof;
+}
+.historiaTxt2{
+  grid-area: texto;
+}
+
+/* ESTILO DE LA PAGINA pUNTOS RECOLECCION*/
+.puntosCards{
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-evenly;
+}
+.cardModal{
+  margin: 1rem; 
+}
+.inactivo{
+  filter: grayscale(100%);
+}
+
+.cardModal a{
+  color:var(--color-texto);
+  text-decoration: none;
+  background-color: var(--color-principal);
+  border-radius: 2rem;
+}
+.card{
+  background-color:  var(--color-principal);
+  width: 22rem; 
+  
+}
+.card-img-top{
+  width: 75%;
+  padding:auto 0;
+}
+/* .cardModal:hover{
+  transform: scale(1.02); 
+  transition: 0.5s;  
+  box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+} */
+.modal{
+  --bs-modal-width: 75%;
+}
+.modal-content{
+  background-color: var(--color-principal);
+}
+
+.modalContainer{
+  width: 100%;
+  height: 100%;
+  }
+.modalDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.descripcion{
+  
+
+}
+
+/* ESTILO DE LA PAGINA MATERIALES*/
 
 
+/* ESTILO DE LA PAGINA COMUNIDAD */
 
+
+/* ESTILO DE LA PAGINA NOTICIAS*/
+
+
+/* ESTILO DE LA PAGINA CONTACTO*/
 
 @media screen and (max-width:991px) {
   .container{
