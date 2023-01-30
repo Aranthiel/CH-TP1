@@ -1,0 +1,8 @@
+
+- hacer menu hamburguesa
+- crear formulario de contacto
+- crear tabs para la pagina de materiales
+- crear boton de scroll up  e integrarlo en todas las paginas ¿lo pongo en el footer?¿lo podré hacer flotante?
+- hacer que el menu no desborde cuando baja de 1400px
+- crear ¿tabs o acordeon? para la pagia de comunidad
+- rever la estetica general, esta fea con ganas
