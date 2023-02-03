@@ -77,7 +77,7 @@ header{
   color:var(--color-texto);
   display: grid;
   grid-template-columns: 4fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto 30rem auto auto;
   grid-template-areas: 
   "encabezado encabezado"
   "banner lateral"
@@ -422,6 +422,40 @@ border-color: var(--color-principal) var(--color-principal) var(--color-texto);
 /* ESTILO DE LA PAGINA COMUNIDAD */
 
 
+.accoridionComunidad{
+  padding-top: 1.5rem;
+}
+
+.botonAcordeon{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.botonAcordeon:focus {
+    border-color: var(--color-contraste);
+    box-shadow: 0 0 0 0.25rem var(--color-contraste-traslucido);
+}
+.botonAcordeon:not(.collapsed) {
+    color: var(--color-texto);
+}
+.botonAcordeon::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  
+}
+.botonAcordeon:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+/* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
+ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath  es color fuxia */ 
+
+
+.itemAcordeon .botonAcordeon {
+  background-color: var(--color-principal);
+}
+.itemAcordeon .botonAcordeon:not(.collapsed) {
+  background-color: var(--color-contraste);
+}
+
+
 /* ESTILO DE LA PAGINA CONTACTO*/
 
 
@@ -432,7 +466,7 @@ border-color: var(--color-principal) var(--color-principal) var(--color-texto);
 @media screen and (max-width:991px) {
   .container{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto 30rem auto auto auto;
     grid-template-areas: 
     "encabezado encabezado"
     "banner banner"
