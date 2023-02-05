@@ -1,0 +1,55 @@
+header{
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  grid-area: encabezado;
+  align-items: center;
+    .barraNav {
+        width: 100%;
+        justify-content: end;
+        font-size: 2rem;
+        font-family: 'Cabin', 'Actor', sans-serif;
+        text-transform: uppercase;
+        .contenedorFluido{
+            .logoImg{
+                padding-left: 1.5rem;
+            }
+            .hamburguesa{
+                border:none;
+                font-size: 2.5rem;
+            }
+            .menu {
+                --bs-nav-link-color: $color-claro; 
+                --bs-nav-link-hover-color: $color-contraste;  
+                justify-content: flex-end;
+                .menuNav{
+                    .itemNav{
+                        .linkNav{
+                            margin: 0 0 0 3rem;
+                        }
+                        .menuDropdown{
+                            background-color: $color-principal;
+                            border: none;
+                            font-size: 1.5rem;
+                            text-align: end;
+                            li {
+                                .dropdownItem{
+                                    &:focus, &:hover {
+                                        color:$color-texto;
+                                        background-color: $color-contraste;
+                                        transition: 0.5s;
+                                        transform: scale(1.05);
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+ 

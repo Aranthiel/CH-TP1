@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  /* calcula automaticamente paRA QUE NO HAYA SCROLL HORIZONTAL*/
+  padding: 0;
+  margin: 0; }
+  * html {
+    font-size: 65.5%;
+    /* esta linea indica que un REM es igual a 10px* lo que nos permite usar el rem como unidad de medida estandar para todo el proyecto */ }
+    * html body {
+      font-size: 1.6rem;
+      font-family: "Didact Gothic", sans-serif;
+      background-color: #1D263B; }
+      * html body h1 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 4.5rem; }
+      * html body h2 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 4rem; }
+      * html body h3 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 3.5rem; }
+      * html body h4 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 3rem; }
+      * html body h5 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 2.5rem; }
+      * html body h6 {
+        font-family: "Cabin", "Actor", sans-serif;
+        text-transform: uppercase;
+        font-size: 2rem; }
+      * html body p {
+        font-family: "Didact Gothic", sans-serif;
+        font-size: 1.6rem; }
+
+p a.fuente {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: end; }

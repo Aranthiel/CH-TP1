@@ -1,0 +1,27 @@
+footer {
+    grid-area: rodapie;
+    .cooperativas{
+        width: 70%;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5rem;
+        .coopCard{
+            width: 15rem;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color:$color-texto;
+                img{
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                }
+                h5{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+  

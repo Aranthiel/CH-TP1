@@ -1,0 +1,39 @@
+.accoridionComunidad{
+    padding-top: 1.5rem;
+    .acordeon{
+        .itemAcordeon{
+            &.botonAcordeon{
+                background-color: $color-principal;
+            }
+            &:not(.collapsed) {
+                background-color: $color-contraste;
+              }   
+            .tituloAcordeon{
+                .botonAcordeon {
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                                    
+                    &:focus {
+                        border-color: $color-contraste;
+                        box-shadow: 0 0 0 0.25rem $color-contraste-traslucido;
+                    }                
+                    &:not(.collapsed) {
+                        color: $color-texto;
+                    }                
+                    &::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            
+                    }                
+                    &:not(.collapsed)::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                    }
+ /* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
+ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath  es color fuxia */ 
+
+                }
+            }
+
+        }
+
+    }
+}

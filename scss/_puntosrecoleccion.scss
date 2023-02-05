@@ -1,0 +1,66 @@
+.puntosAcopio{
+    .contenedorPuntos{
+        .puntosCards{
+            padding-top: 2.5rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;  
+            justify-content: space-evenly;
+            .cardModal{
+                margin: 1rem;
+                a{
+                    color:$color-texto;
+                    text-decoration: none;
+                    background-color:$color-principal;
+                    border-radius: 2rem;
+                    .tarjeta{
+                        background-color: $color-principal;
+                        width: 22rem;
+                        height:32rem;
+                        .tarjetaImgTop{
+                            width: 75%;
+                            padding:auto 0;
+                        }
+
+                    }
+                    .card-body{
+                        .tarjetaTitulo{
+                            font-size: 2.5rem;
+                        }
+                        .tarjetaSubtitulo{
+                            font-size: 1.2rem;
+                        }
+                        .tarjetaTexto{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+                .modal{
+                    .sizeModal{
+                        width: 60%;
+                        max-width: none;
+                        .contenidoModal{
+                            background-color:$color-principal;
+                            flex-direction: row;
+                            /* .modalCarrousel{
+                                estilos propios de bootstrap
+                            } */
+                            /* .modalInfo{
+                                .descripcion{ 
+                                    estilos propios de bootstrap
+                                }
+                            } */
+                        }
+
+                    }
+                }
+            }
+            .inactivo{
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
+    
+    

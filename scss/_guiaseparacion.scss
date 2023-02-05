@@ -1,0 +1,30 @@
+.materiales{
+    display: flex;
+    flex-direction: column;
+    .tabMateriales{
+        .navTabs{
+            .tabNavItem{
+                .tabNavLink {
+                    color: $color-texto;
+                    text-transform: uppercase;
+                    --bs-nav-link-color: $color-claro;
+                    --bs-nav-link-hover-color: $color-contraste;
+                    &.active{
+                        font-weight: 600;
+                        color: $color-texto;
+                        background-color:$color-principal;
+                        border-color: $color-principal $color-principal $color-texto;
+                    }
+                }
+            }
+        }
+        /* .tabContent{
+            .tabPane{
+                .tituloMaterial{}
+                .contenidoMaterial{}
+                .materialInfo{}
+            }
+        } */
+
+    }
+}

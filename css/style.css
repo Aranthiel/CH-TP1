@@ -395,26 +395,26 @@ position: relative;
 background-color: #F0A202;
 } */
 
-/* ESTILO DE LA PAGINA MATERIALES*/
-.contenidoMaterial{
-display: ;
-}
+/* ESTILO DE LA PAGINA GUIA DE SEPARACION */
+/* .contenidoMaterial{
+
+} */
 .materialImg{
 display: flex;
 flex-direction: column;
 }
-.upperLink{
+.tabNavLink{
 color:var(--color-texto);
 text-transform: uppercase;
 --bs-nav-link-color: var(--color-claro); 
 --bs-nav-link-hover-color: var(--color-contraste);  
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active  {  
-font-weight: 600;
-color: var(--color-texto);
-background-color:var(--color-principal);
-border-color: var(--color-principal) var(--color-principal) var(--color-texto);
-}
+.navTabs .tabNavLink.active  {  
+  font-weight: 600;
+  color: var(--color-texto);
+  background-color:var(--color-principal);
+  border-color: var(--color-principal) var(--color-principal) var(--color-texto);
+  }
 
 
 

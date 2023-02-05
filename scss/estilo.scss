@@ -1,0 +1,140 @@
+$color-principal:#6fad3e;
+$color-contraste: #F0A202;
+$color-muted:#1D263B;
+$color-texto: #1d1d1d;
+$color-claro:#EDFFEC;
+$color-traslucido:rgba(255, 255, 255, 0.25);
+$color-contraste-traslucido:rgba(240,162,2,0.35);  
+
+$fuente-titulos:  'Cabin', 'Actor', sans-serif;
+$fuente-proyecto:  'Didact Gothic', sans-serif;
+$fuente-otra:  'Poppins', sans-serif;
+
+* {
+  box-sizing: border-box;
+  /* calcula automaticamente paRA QUE NO HAYA SCROLL HORIZONTAL*/
+  padding: 0;
+  margin: 0;
+
+  html {
+    font-size: 65.5%;
+
+    /* esta linea indica que un REM es igual a 10px* lo que nos permite usar el rem como unidad de medida estandar para todo el proyecto */
+    body {
+      font-size: 1.6rem;
+      font-family: $fuente-proyecto;
+      background-color: $color-muted;
+
+      .contenedor {
+        width: 95%;
+        background-color: $color-principal;
+        color: $color-texto;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: auto 30rem auto auto;
+        grid-template-areas:
+          "encabezado encabezado"
+          "banner lateral"
+          "principal lateral"
+          "rodapie rodapie";
+      }
+
+      h1 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+      }
+
+      h2 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+      }
+
+      h4 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+
+      h5 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+      }
+
+      h6 {
+        font-family: $fuente-titulos;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: $fuente-proyecto;
+        font-size: 1.6rem;
+      }
+
+      main {
+        width: 99.3%;
+        height: auto;
+        max-height: 82rem;
+        overflow-y: auto;
+        grid-area: principal;
+        background-color: $color-claro;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        padding: 1.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        /*Estilos estándar experimentales (Principalmente Firefox)*/
+        scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+        scrollbar-width: thin;
+        scrollbar-gutter: 5rem;
+
+        /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+        &::-webkit-scrollbar {
+          -webkit-appearance: none;
+        }
+
+        &::-webkit-scrollbar:vertical {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-button:increment,
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $color-principal;
+          border-radius: 20px;
+          border: 2px solid #f1f2f3;
+        }
+
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+}
+  
+@import "header";
+@import "banner";
+@import "aside";
+@import "footer";
+@import "index";
+@import "guiaseparacion";
+@import "puntosrecoleccion";
+@import "comunidadhub";
+@import "contacto";
+
+
+  

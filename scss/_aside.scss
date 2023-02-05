@@ -1,0 +1,44 @@
+aside {
+    grid-area: lateral;
+    background-color: $color-contraste;
+    margin-left: 0.5rem;  
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: space-between;
+    .asideBanner{
+        width:100%;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+        margin-bottom: 2rem;
+        background-color: $color-traslucido;
+        height: 23%;
+        border-radius: 0.3rem;
+        transition: 0.5s;
+        /*padding:1rem;*/
+        a{
+            .bannerImg{
+                filter: none;
+            }
+            .txtBanner{
+                h2{ 
+                    color:$color-texto;
+                    font-size: 3rem;
+                    font-weight: 900;
+                    text-shadow: 3px 3px 1px rgb(240,162,2); 
+                    /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/
+                }
+            }
+        }
+        &:hover{
+            transform: scale(1.02); 
+            transition: 0.5s;  
+            box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+        }
+    }
+}
+  
+ 
