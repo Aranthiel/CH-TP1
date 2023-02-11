@@ -1,5 +1,11 @@
 footer {
     grid-area: rodapie;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+        padding-top: 1.5rem;
+    }
     .cooperativas{
         width: 70%;
         margin:0 auto;
@@ -9,10 +15,15 @@ footer {
         .coopCard{
             width: 15rem;
             text-align: center;
-            a {
+            &:hover{
+                transition: 1.5s;
+                transform: scale(1.1);
+            }
+            .iconoCoop {
                 text-decoration: none;
                 color:$color-texto;
                 img{
+                    width: 9rem;
                     padding: 1rem;
                     font-size: 1.2rem;
                 }
@@ -22,6 +33,16 @@ footer {
                 }
             }
         }
+    }
+    .copyright{
+        text-align: center;
+        padding: 1rem;
+        width: 101%;
+        background-color: $color-oscuro-traslucido;
+        a {
+            color: $color-blanco;
+        }
+
     }
 }
   

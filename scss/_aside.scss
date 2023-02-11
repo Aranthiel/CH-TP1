@@ -1,3 +1,4 @@
+
 aside {
     grid-area: lateral;
     background-color: $color-contraste;
@@ -28,7 +29,7 @@ aside {
                     color:$color-texto;
                     font-size: 3rem;
                     font-weight: 900;
-                    text-shadow: 3px 3px 1px rgb(240,162,2); 
+                    text-shadow: 3px 3px 1px  $color-principal; 
                     /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/
                 }
             }

@@ -1,11 +1,13 @@
 :root {
-  --color-principal:#6fad3e;
-  --color-contraste: #F0A202;
-  --color-muted:#1D263B;
+  /* paleta de colores: https://coolors.co/91c06c-d6e8c8-5fa429-f4f9f0-0f0f0f*/
+  --color-principal:#5FA429;
+  --color-contraste: #91C06C;
+  --color-muted:#0F0F0F;
   --color-texto: #1d1d1d;
-  --color-claro:#EDFFEC;
-  --color-traslucido:rgba(255, 255, 255, 0.25);
-  --color-contraste-traslucido:rgba(240,162,2,0.35);  
+  --color-claro:#D6E8C8;
+  --color-blanco:#F4F9F0;
+  --color-traslucido:#ffffff40;
+  --color-contraste-traslucido:#91c06c40;  
 
   --fuente-titulos:  'Poppins', sans-serif;
   --fuente-italic:  'Poppins', sans-serif;
@@ -198,7 +200,7 @@ aside {
   color:var(--color-texto);
   font-size: 3rem;
   font-weight: 900;
-  text-shadow: 3px 3px 1px rgb(240,162,2); 
+  text-shadow: 3px 3px 1px var(--color-principal); 
   /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/
 }
 .asideBanner:hover{

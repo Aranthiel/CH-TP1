@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   /* calcula automaticamente paRA QUE NO HAYA SCROLL HORIZONTAL*/
@@ -9,7 +10,15 @@
     * html body {
       font-size: 1.6rem;
       font-family: "Didact Gothic", sans-serif;
-      background-color: #1D263B; }
+      background-color: #0F0F0F; }
+      * html body .contenedor {
+        width: 95%;
+        background-color: #5FA429;
+        color: #1d1d1d;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: auto 30rem auto auto;
+        grid-template-areas: "encabezado encabezado" "banner lateral" "principal lateral" "rodapie rodapie"; }
       * html body h1 {
         font-family: "Cabin", "Actor", sans-serif;
         text-transform: uppercase;
@@ -37,9 +46,293 @@
       * html body p {
         font-family: "Didact Gothic", sans-serif;
         font-size: 1.6rem; }
+      * html body main {
+        width: 99.3%;
+        height: auto;
+        max-height: 82rem;
+        overflow-y: auto;
+        grid-area: principal;
+        background-color: #D6E8C8;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        padding: 1.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        /*Estilos estándar experimentales (Principalmente Firefox)*/
+        scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0);
+        scrollbar-width: thin;
+        scrollbar-gutter: 5rem;
+        /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/ }
+        * html body main::-webkit-scrollbar {
+          -webkit-appearance: none; }
+        * html body main::-webkit-scrollbar:vertical {
+          width: 10px; }
+        * html body main::-webkit-scrollbar-button:increment, * html body main::-webkit-scrollbar-button {
+          display: none; }
+        * html body main::-webkit-scrollbar-thumb {
+          background-color: #5FA429;
+          border-radius: 20px;
+          border: 2px solid #f1f2f3; }
+        * html body main::-webkit-scrollbar-track {
+          border-radius: 10px; }
 
-p a.fuente {
-  font-family: 'Didact Gothic', sans-serif;
+header {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: encabezado;
+  align-items: center; }
+  header .barraNav {
+    width: 100%;
+    justify-content: end;
+    font-size: 2rem;
+    font-family: 'Cabin', 'Actor', sans-serif;
+    text-transform: uppercase; }
+    header .barraNav .contenedorFluido .logoImg {
+      padding-left: 1.5rem; }
+    header .barraNav .contenedorFluido .hamburguesa {
+      border: none;
+      font-size: 2.5rem; }
+    header .barraNav .contenedorFluido .menu {
+      --bs-nav-link-color: $color-claro;
+      --bs-nav-link-hover-color: $color-contraste;
+      justify-content: flex-end; }
+      header .barraNav .contenedorFluido .menu .menuNav .itemNav .linkNav {
+        margin: 0 0 0 3rem; }
+      header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown {
+        background-color: #5FA429;
+        border: none;
+        font-size: 1.5rem;
+        text-align: end; }
+        header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown li .dropdownItem:focus, header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown li .dropdownItem:hover {
+          color: #1d1d1d;
+          background-color: #91C06C;
+          transition: 0.5s;
+          transform: scale(1.05); }
+
+.seccionbanner {
+  grid-area: banner;
+  background-color: #D6E8C8;
+  margin-right: 0.5rem;
+  padding: 1.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  /* hacer hover a un elemento y aplicar efecto sobre otro elemento*/
+  /*tutorial https://www.youtube.com/watch?v=UeQyNsX-23E*/ }
+  .seccionbanner .banner {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+    margin-bottom: 2rem; }
+    .seccionbanner .banner .bannerImg {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      min-height: 25rem;
+      filter: grayscale(1);
+      position: relative; }
+      .seccionbanner .banner .bannerImg:hover {
+        /*cuando el cursor pasa por el texto se pierde el efecto hover 
+                ¿como se soluciona?*/
+        filter: none; }
+    .seccionbanner .banner .txtBanner {
+      color: #5FA429;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: 0.5s; }
+      .seccionbanner .banner .txtBanner h2 {
+        font-size: 5rem;
+        font-weight: 900;
+        /* text-shadow: 2px 2px 1px rgb(240,162,2); */
+        text-shadow: 3px 3px 1px #131313; }
+
+aside {
+  grid-area: lateral;
+  background-color: #91C06C;
+  margin-left: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between; }
+  aside .asideBanner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+    margin-bottom: 2rem;
+    background-color: #ffffff40;
+    height: 23%;
+    border-radius: 0.3rem;
+    transition: 0.5s;
+    /*padding:1rem;*/ }
+    aside .asideBanner a .bannerImg {
+      filter: none; }
+    aside .asideBanner a .txtBanner h2 {
+      color: #1d1d1d;
+      font-size: 3rem;
+      font-weight: 900;
+      text-shadow: 3px 3px 1px #5FA429;
+      /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/ }
+    aside .asideBanner:hover {
+      transform: scale(1.02);
+      transition: 0.5s;
+      box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d; }
+
+footer {
+  grid-area: rodapie;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  footer h4 {
+    padding-top: 1.5rem; }
+  footer .cooperativas {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem; }
+    footer .cooperativas .coopCard {
+      width: 15rem;
+      text-align: center; }
+      footer .cooperativas .coopCard:hover {
+        transition: 1.5s;
+        transform: scale(1.1); }
+      footer .cooperativas .coopCard .iconoCoop {
+        text-decoration: none;
+        color: #1d1d1d; }
+        footer .cooperativas .coopCard .iconoCoop img {
+          width: 9rem;
+          padding: 1rem;
+          font-size: 1.2rem; }
+        footer .cooperativas .coopCard .iconoCoop h5 {
+          font-size: 1.2rem;
+          font-weight: 700; }
+  footer .copyright {
+    text-align: center;
+    padding: 1rem;
+    width: 101%;
+    background-color: #00000033; }
+    footer .copyright a {
+      color: #F4F9F0; }
+
+.historiaHub .historiaTxt2 p .fuente {
+  font-family: "Didact Gothic", sans-serif;
   font-size: 1.2rem;
   font-style: italic;
   text-align: end; }
+
+.materiales {
+  display: flex;
+  flex-direction: column; }
+  .materiales .tabMateriales {
+    /* .tabContent{
+            .tabPane{
+                .tituloMaterial{}
+                .contenidoMaterial{}
+                .materialInfo{}
+            }
+        } */ }
+    .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink {
+      color: #1d1d1d;
+      text-transform: uppercase;
+      --bs-nav-link-color: $color-claro;
+      --bs-nav-link-hover-color: $color-contraste; }
+      .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink.active {
+        font-weight: 600;
+        color: #1d1d1d;
+        background-color: #5FA429;
+        border-color: #5FA429 #5FA429 #1d1d1d; }
+
+.puntosAcopio .contenedorPuntos .puntosCards {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .puntosAcopio .contenedorPuntos .puntosCards .cardModal {
+    margin: 1rem; }
+    .puntosAcopio .contenedorPuntos .puntosCards .cardModal a {
+      color: #1d1d1d;
+      text-decoration: none;
+      background-color: #5FA429;
+      border-radius: 2rem; }
+      .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta {
+        background-color: #5FA429;
+        width: 22rem;
+        height: 32rem; }
+        .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta .tarjetaImgTop {
+          width: 75%;
+          padding: auto 0; }
+      .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaTitulo {
+        font-size: 2.5rem; }
+      .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaSubtitulo {
+        font-size: 1.2rem; }
+      .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaTexto {
+        font-size: 1.6rem; }
+    .puntosAcopio .contenedorPuntos .puntosCards .cardModal .modal .sizeModal {
+      width: 60%;
+      max-width: none; }
+      .puntosAcopio .contenedorPuntos .puntosCards .cardModal .modal .sizeModal .contenidoModal {
+        background-color: #5FA429;
+        flex-direction: row;
+        /* .modalCarrousel{
+                                estilos propios de bootstrap
+                            } */
+        /* .modalInfo{
+                                .descripcion{ 
+                                    estilos propios de bootstrap
+                                }
+                            } */ }
+  .puntosAcopio .contenedorPuntos .puntosCards .inactivo {
+    filter: grayscale(100%); }
+
+.accoridionComunidad {
+  padding-top: 1.5rem; }
+  .accoridionComunidad .acordeon .itemAcordeon.botonAcordeon {
+    background-color: #5FA429; }
+  .accoridionComunidad .acordeon .itemAcordeon.botonAcordeon:not(.collapsed) {
+    background-color: #91C06C; }
+  .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    /* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
+ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath  es color fuxia */ }
+    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:focus {
+      border-color: #91C06C;
+      box-shadow: 0 0 0 0.25rem #91c06c40; }
+    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed) {
+      color: #1d1d1d; }
+    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+
+.formularioContacto {
+  width: 80%;
+  background-color: #91C06C;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "imgContacto nombre telefono" "imgContacto email email" "imgContacto mensaje mensaje" "boton boton"; }
+  .formularioContacto .imagenContacto {
+    grid-area: imgContacto; }
+  .formularioContacto .formNombre {
+    grid-area: nombre; }
+  .formularioContacto .formTelefono {
+    grid-area: telefono; }
+  .formularioContacto .formEmail {
+    grid-area: email; }
+  .formularioContacto .formMotivo {
+    grid-area: email; }
+  .formularioContacto .formMensaje {
+    grid-area: mensaje; }
+  .formularioContacto .formSubmit {
+    grid-area: boton; }
