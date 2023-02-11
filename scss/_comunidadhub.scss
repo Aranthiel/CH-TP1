@@ -5,7 +5,7 @@
             &.botonAcordeon{
                 background-color: $color-principal;
             }
-            &:not(.collapsed) {
+            &.botonAcordeon:not(.collapsed) {
                 background-color: $color-contraste;
               }   
             .tituloAcordeon{
