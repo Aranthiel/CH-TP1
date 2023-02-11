@@ -251,6 +251,10 @@ footer {
         color: #1d1d1d;
         background-color: #5FA429;
         border-color: #5FA429 #5FA429 #1d1d1d; }
+      .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink:hover, .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink:focus {
+        /* este estilo no se esta aplicando, ver que pasa*/
+        color: #5FA429;
+        font-weight: bold; }
 
 .puntosAcopio .contenedorPuntos .puntosCards {
   padding-top: 2.5rem;
@@ -267,13 +271,14 @@ footer {
       border-radius: 2rem; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta {
         background-color: #5FA429;
-        width: 22rem;
-        height: 32rem; }
+        width: 25rem;
+        height: 35rem; }
         .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta .tarjetaImgTop {
-          width: 75%;
-          padding: auto 0; }
+          width: 50%;
+          margin: 1rem;
+          border-radius: 50%; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaTitulo {
-        font-size: 2.5rem; }
+        font-size: 2rem; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaSubtitulo {
         font-size: 1.2rem; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaTexto {

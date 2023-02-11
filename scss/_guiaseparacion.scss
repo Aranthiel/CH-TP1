@@ -15,7 +15,12 @@
                         background-color:$color-principal;
                         border-color: $color-principal $color-principal $color-texto;
                     }
+                    &:hover, &:focus{ /* este estilo no se esta aplicando, ver que pasa*/
+                        color: $color-principal;
+                        font-weight: bold;
+                    }                    
                 }
+                
             }
         }
         /* .tabContent{
