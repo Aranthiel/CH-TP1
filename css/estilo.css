@@ -86,7 +86,7 @@ header {
   header .barraNav {
     width: 100%;
     justify-content: end;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: 'Cabin', 'Actor', sans-serif;
     text-transform: uppercase; }
     header .barraNav .contenedorFluido .logoImg {
@@ -99,17 +99,17 @@ header {
       --bs-nav-link-hover-color: $color-contraste;
       justify-content: flex-end; }
       header .barraNav .contenedorFluido .menu .menuNav .itemNav .linkNav {
-        margin: 0 0 0 3rem; }
+        padding: 0 1.5rem; }
+        header .barraNav .contenedorFluido .menu .menuNav .itemNav .linkNav:hover {
+          background-color: #91C06C; }
       header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown {
         background-color: #5FA429;
         border: none;
         font-size: 1.5rem;
         text-align: end; }
         header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown li .dropdownItem:focus, header .barraNav .contenedorFluido .menu .menuNav .itemNav .menuDropdown li .dropdownItem:hover {
-          color: #1d1d1d;
-          background-color: #91C06C;
-          transition: 0.5s;
-          transform: scale(1.05); }
+          color: #5FA429;
+          background-color: #1d1d1d; }
 
 .seccionbanner {
   grid-area: banner;
@@ -378,21 +378,121 @@ ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath
 
 .formularioContacto {
   width: 80%;
-  background-color: #91C06C;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "imgContacto nombre telefono" "imgContacto email email" "imgContacto mensaje mensaje" "boton boton"; }
+  display: grid;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Cabin", "Actor", sans-serif;
+  background-color: #5FA429;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(4, 8rem) 20rem 5rem;
+  grid-template-areas: 'areaFoto  areaName'  'areaFoto  areaTel' 'areaFoto  areaEmail ' 'areaFoto  areaMotivo ' 'areaFoto  areaMsj' 'areaFoto  areaBtn'; }
   .formularioContacto .imagenContacto {
-    grid-area: imgContacto; }
+    grid-area: areaFoto; }
+    .formularioContacto .imagenContacto img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      min-height: 25rem;
+      position: relative;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
   .formularioContacto .formNombre {
-    grid-area: nombre; }
+    grid-area: areaName;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1.5rem; }
+    .formularioContacto .formNombre input {
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-family: "Didact Gothic", sans-serif;
+      border: none;
+      border-bottom: 0.2rem solid #91C06C;
+      height: 4rem;
+      color: #1d1d1d; }
+      .formularioContacto .formNombre input:focus {
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .formularioContacto .formNombre input::placeholder {
+        color: #D6E8C8; }
   .formularioContacto .formTelefono {
-    grid-area: telefono; }
+    grid-area: areaTel;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1.5rem; }
+    .formularioContacto .formTelefono input {
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-family: "Didact Gothic", sans-serif;
+      border: none;
+      border-bottom: 0.2rem solid #91C06C;
+      height: 4rem;
+      color: #1d1d1d; }
+      .formularioContacto .formTelefono input:focus {
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .formularioContacto .formTelefono input::placeholder {
+        color: #D6E8C8; }
   .formularioContacto .formEmail {
-    grid-area: email; }
+    grid-area: areaEmail;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1.5rem; }
+    .formularioContacto .formEmail input {
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-family: "Didact Gothic", sans-serif;
+      border: none;
+      border-bottom: 0.2rem solid #91C06C;
+      height: 4rem;
+      color: #1d1d1d; }
+      .formularioContacto .formEmail input:focus {
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .formularioContacto .formEmail input::placeholder {
+        color: #D6E8C8; }
   .formularioContacto .formMotivo {
-    grid-area: email; }
+    grid-area: areaMotivo;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1.5rem; }
+    .formularioContacto .formMotivo input {
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-family: "Didact Gothic", sans-serif;
+      border: none;
+      border-bottom: 0.2rem solid #91C06C;
+      height: 4rem;
+      color: #1d1d1d; }
+      .formularioContacto .formMotivo input:focus {
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .formularioContacto .formMotivo input::placeholder {
+        color: #D6E8C8; }
   .formularioContacto .formMensaje {
-    grid-area: mensaje; }
+    grid-area: areaMsj;
+    padding: 0 0 1.5rem 1.5rem;
+    margin-bottom: 1.5rem; }
+    .formularioContacto .formMensaje textarea {
+      margin-top: 1.5rem;
+      background-color: #D6E8C8;
+      font-size: 1.4rem;
+      font-family: "Didact Gothic", sans-serif;
+      border: none;
+      border-bottom: 0.2rem solid #91C06C;
+      height: 15rem;
+      color: #1d1d1d; }
+      .formularioContacto .formMensaje textarea:focus {
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .formularioContacto .formMensaje textarea::placeholder {
+        color: #D6E8C8; }
   .formularioContacto .formSubmit {
-    grid-area: boton; }
+    grid-area: areaBtn;
+    padding: 0 0 1.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .formularioContacto .formSubmit input {
+      width: 15rem;
+      height: 3rem;
+      border-radius: 2rem;
+      background-color: #91C06C;
+      border: none;
+      text-transform: uppercase; }
+      .formularioContacto .formSubmit input:hover {
+        color: #91C06C;
+        background-color: #1d1d1d;
+        border: 0.2rem solid #91C06C;
+        font-weight: bold; }

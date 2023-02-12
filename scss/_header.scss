@@ -8,7 +8,7 @@ header{
     .barraNav {
         width: 100%;
         justify-content: end;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-family: 'Cabin', 'Actor', sans-serif;
         text-transform: uppercase;
         .contenedorFluido{
@@ -26,7 +26,11 @@ header{
                 .menuNav{
                     .itemNav{
                         .linkNav{
-                            margin: 0 0 0 3rem;
+                            // margin: 0 0 0 3rem;
+                            padding:0 1.5rem;
+                            &:hover {
+                                background-color: $color-contraste;
+                            }
                         }
                         .menuDropdown{
                             background-color: $color-principal;
@@ -36,10 +40,8 @@ header{
                             li {
                                 .dropdownItem{
                                     &:focus, &:hover {
-                                        color:$color-texto;
-                                        background-color: $color-contraste;
-                                        transition: 0.5s;
-                                        transform: scale(1.05);
+                                        color:$color-principal;
+                                        background-color: $color-texto;
                                     }
                                 }
                             }
