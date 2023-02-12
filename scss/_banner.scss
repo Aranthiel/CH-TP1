@@ -12,7 +12,7 @@
         overflow: hidden;
         position: relative;
         border-radius: 2rem;
-        box-shadow: $box-shadow-oscuro;
+        box-shadow: $box-shadow-principal;
         margin-bottom: 2rem;
         .bannerImg {
             object-fit: cover;
@@ -49,4 +49,9 @@
   /*tutorial https://www.youtube.com/watch?v=UeQyNsX-23E*/
   
 }
-  
+
+@media screen and (max-width:1279px){
+    .seccionbanner {
+        margin-right: 0;
+    }
+}

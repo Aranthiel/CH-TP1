@@ -13,7 +13,7 @@
                                     
                     &:focus {
                         border-color: $color-contraste;
-                        box-shadow: $box-shadow-claro;
+                        box-shadow: $box-shadow-oscuro;
                     }                
                     &:not(.collapsed) {
                         color: $color-texto;
