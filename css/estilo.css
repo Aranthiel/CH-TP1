@@ -47,7 +47,7 @@
         font-family: "Didact Gothic", sans-serif;
         font-size: 1.6rem; }
       * html body main {
-        width: 99.3%;
+        width: 99.5%;
         height: auto;
         max-height: 82rem;
         overflow-y: auto;
@@ -126,7 +126,7 @@ header {
     overflow: hidden;
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+    box-shadow: 0.5rem 0.8rem 1.2rem #5FA429;
     margin-bottom: 2rem; }
     .seccionbanner .banner .bannerImg {
       object-fit: cover;
@@ -134,7 +134,8 @@ header {
       height: 100%;
       min-height: 25rem;
       filter: grayscale(1);
-      position: relative; }
+      position: relative;
+      transition: 1s; }
       .seccionbanner .banner .bannerImg:hover {
         /*cuando el cursor pasa por el texto se pierde el efecto hover 
                 ¿como se soluciona?*/
@@ -165,27 +166,36 @@ aside {
   justify-content: space-between; }
   aside .asideBanner {
     width: 100%;
+    height: 25rem;
     overflow: hidden;
     position: relative;
-    box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+    box-shadow: 0.5rem 0.8rem 1.2rem #5FA429;
     margin-bottom: 2rem;
     background-color: #ffffff40;
-    height: 23%;
     border-radius: 0.3rem;
-    transition: 0.5s;
+    transition: 1s;
     /*padding:1rem;*/ }
     aside .asideBanner a .bannerImg {
-      filter: none; }
-    aside .asideBanner a .txtBanner h2 {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      min-height: 25rem;
+      position: relative; }
+    aside .asideBanner a .txtBanner {
       color: #1d1d1d;
-      font-size: 3rem;
-      font-weight: 900;
-      text-shadow: 3px 3px 1px #5FA429;
-      /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/ }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      transition: 1s; }
+      aside .asideBanner a .txtBanner h2 {
+        font-size: 3rem;
+        font-weight: 900;
+        text-shadow: 3px 3px 1px #5FA429; }
     aside .asideBanner:hover {
       transform: scale(1.02);
-      transition: 0.5s;
-      box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d; }
+      transition: 0.5s; }
 
 footer {
   grid-area: rodapie;
@@ -224,38 +234,83 @@ footer {
     footer .copyright a {
       color: #F4F9F0; }
 
-.historiaHub .historiaTxt2 p .fuente {
-  font-family: "Didact Gothic", sans-serif;
-  font-size: 1.2rem;
-  font-style: italic;
-  text-align: end; }
+.historiaHub {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "titulo titulo" "foto textof" "texto texto";
+  column-gap: 1.5rem; }
+  .historiaHub .historiaTitulo {
+    grid-area: titulo;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem; }
+  .historiaHub .historiaImg {
+    grid-area: foto;
+    width: 100%;
+    height: 22.5rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-bottom: 2rem; }
+    .historiaHub .historiaImg .historiaImgCover {
+      /* en 1398px pierde la linea con el segundo py la recupera en 992 con @mediaScreen y se rompe debajo de los 400px*/
+      object-fit: cover;
+      object-position: 0 0;
+      width: 100%;
+      height: 100%;
+      min-height: 25rem;
+      position: relative; }
+  .historiaHub .historiaTxt1 {
+    grid-area: textof; }
+  .historiaHub .historiaTxt2 {
+    grid-area: texto; }
+    .historiaHub .historiaTxt2 .InfoSource {
+      text-align: end; }
+      .historiaHub .historiaTxt2 .InfoSource .fuente {
+        font-size: inherit;
+        text-decoration: none;
+        font-style: italic;
+        color: #1d1d1d; }
+        .historiaHub .historiaTxt2 .InfoSource .fuente:hover {
+          color: #5FA429; }
 
-.materiales {
-  display: flex;
-  flex-direction: column; }
-  .materiales .tabMateriales {
-    /* .tabContent{
+/* no funciona, el estilo queda en style.css
+
+.materiales{
+    display: flex;
+    flex-direction: column;
+    .tabMateriales{
+        .navTabs{
+            .tabNavItem{
+                .tabNavLink {
+                    color: $color-texto;
+                    text-transform: uppercase;
+                    --bs-nav-link-color: $color-claro;
+                    --bs-nav-link-hover-color: $color-contraste;
+                    &.active{
+                        font-weight: 600;
+                        color: $color-texto;
+                        background-color:$color-principal;
+                        border-color: $color-principal $color-principal $color-texto;
+                    }
+                    &:hover, &:focus{ 
+                        color: $color-principal;
+                        font-weight: bold;
+                    }                    
+                }
+                
+            }
+        }
+         .tabContent{
             .tabPane{
                 .tituloMaterial{}
                 .contenidoMaterial{}
                 .materialInfo{}
             }
-        } */ }
-    .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink {
-      color: #1d1d1d;
-      text-transform: uppercase;
-      --bs-nav-link-color: $color-claro;
-      --bs-nav-link-hover-color: $color-contraste; }
-      .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink.active {
-        font-weight: 600;
-        color: #1d1d1d;
-        background-color: #5FA429;
-        border-color: #5FA429 #5FA429 #1d1d1d; }
-      .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink:hover, .materiales .tabMateriales .navTabs .tabNavItem .tabNavLink:focus {
-        /* este estilo no se esta aplicando, ver que pasa*/
-        color: #5FA429;
-        font-weight: bold; }
+        } 
 
+    }
+} */
 .puntosAcopio .contenedorPuntos .puntosCards {
   padding-top: 2.5rem;
   display: flex;
@@ -302,24 +357,24 @@ footer {
 
 .accoridionComunidad {
   padding-top: 1.5rem; }
-  .accoridionComunidad .acordeon .itemAcordeon.botonAcordeon {
-    background-color: #5FA429; }
-  .accoridionComunidad .acordeon .itemAcordeon.botonAcordeon:not(.collapsed) {
-    background-color: #91C06C; }
-  .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    /* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
+  .accoridionComunidad .acordeon .itemAcordeon {
+    background-color: #D6E8C8; }
+    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon {
+      background-color: #5FA429;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      /* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
 ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath  es color fuxia */ }
-    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:focus {
-      border-color: #91C06C;
-      box-shadow: 0 0 0 0.25rem #91c06c40; }
-    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed) {
-      color: #1d1d1d; }
-    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon::after {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
-    .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed)::after {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+      .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:focus {
+        border-color: #91C06C;
+        box-shadow: 0 0 0 0.25rem #91c06c40; }
+      .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed) {
+        color: #1d1d1d;
+        background-color: #91C06C; }
+      .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
+      .accoridionComunidad .acordeon .itemAcordeon .tituloAcordeon .botonAcordeon:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); }
 
 .formularioContacto {
   width: 80%;

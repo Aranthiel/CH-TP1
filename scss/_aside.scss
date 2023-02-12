@@ -9,35 +9,43 @@ aside {
     flex-direction:column;
     align-content: center;
     justify-content: space-between;
-    .asideBanner{
+    .asideBanner{        
         width:100%;
+        height: 25rem;
         overflow: hidden;
         position: relative;
-        box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+        box-shadow: $box-shadow-oscuro;
         margin-bottom: 2rem;
-        background-color: $color-traslucido;
-        height: 23%;
+        background-color: $color-traslucido;        
         border-radius: 0.3rem;
-        transition: 0.5s;
+        transition: 1s;
         /*padding:1rem;*/
         a{
-            .bannerImg{
-                filter: none;
+            .bannerImg{   
+                object-fit: cover;
+                width:100%;
+                height: 100%;
+                min-height: 25rem;  
+                position: relative;             
             }
             .txtBanner{
-                h2{ 
-                    color:$color-texto;
+                color: $color-texto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                transition: 1s;
+                h2{
                     font-size: 3rem;
                     font-weight: 900;
                     text-shadow: 3px 3px 1px  $color-principal; 
-                    /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/
                 }
             }
         }
         &:hover{
             transform: scale(1.02); 
-            transition: 0.5s;  
-            box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+            transition: 0.5s;             
         }
     }
 }

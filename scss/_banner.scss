@@ -12,7 +12,7 @@
         overflow: hidden;
         position: relative;
         border-radius: 2rem;
-        box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
+        box-shadow: $box-shadow-oscuro;
         margin-bottom: 2rem;
         .bannerImg {
             object-fit: cover;
@@ -21,6 +21,7 @@
             min-height: 25rem;  
             filter: grayscale(1);
             position: relative;
+            transition: 1s;
             &:hover{ 
                 /*cuando el cursor pasa por el texto se pierde el efecto hover 
                 ¿como se soluciona?*/

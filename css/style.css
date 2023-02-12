@@ -57,23 +57,8 @@ p{
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1.6rem;
 }
-p a.fuente{
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 1.2rem;
-  font-style: italic;
-  text-align: end;
-}
 
-
-header{
-  padding: 1.5rem 0;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-  grid-area: encabezado;
-  align-items: center;
-}
- .contenedor{
+.contenedor{
   width: 95%;
   background-color: var(--color-principal);
   color:var(--color-texto);
@@ -87,157 +72,13 @@ header{
   "rodapie rodapie";
 }
 
-.barraNav {
-  width: 100%;
-  justify-content: end;
-  font-size: 2rem;
-  font-family: 'Cabin', 'Actor', sans-serif;
-  text-transform: uppercase;
-}
-.logoImg{
-  padding-left: 1.5rem;
-}
-.hamburguesa{
-  border:none;
-  font-size: 2.5rem;
-}
-.menu {
-  --bs-nav-link-color: var(--color-claro); 
-  --bs-nav-link-hover-color: var(--color-contraste);  
-  justify-content: flex-end;
-}
-.linkNav{
-  margin: 0 0 0 3rem;
-}
-.menuDropdown{
-  background-color: var(--color-principal);
-  border: none;
-  font-size: 1.5rem;
-  text-align: end;
-}
-.dropdownItem:focus, .dropdownItem:hover {
-  color:var(--color-texto);
-  background-color: var(--color-contraste);
-  transition: 0.5s;
-  transform: scale(1.05);
-}
 
-/*banner*/
-.seccionbanner {
-  grid-area: banner;
-  background-color: var(--color-claro);
-  margin-right: 0.5rem;
-  padding: 1.5rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
+/*estilo seccion banner generado como partial scss*/
+/*estilo seccion aside generado como partial scss*/
+/*estilo seccion FOOTER generado como partial scss*/
 
-.banner{
-  width:100%;
-  height: 25rem; 
-  overflow: hidden;
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
-  margin-bottom: 2rem;
-  
-}
- .bannerImg {
-  object-fit: cover;
-  width:100%;
-  height: 100%;
-  min-height: 25rem;  
-  filter: grayscale(1);
-  position: relative;
- }
- .bannerImg:hover{ 
-  /*cuando el cursor pasa por el texto se pierde el efecto hover 
-  ¿como se soluciona?*/
-  filter: none;
- }
-.txtBanner{
-  color: var(--color-principal);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-  transition: 0.5s;
-}
-.txtBanner h2{
-  font-size: 5rem;
-  font-weight: 900;
-  /* text-shadow: 2px 2px 1px rgb(240,162,2); */
-  text-shadow: 3px 3px 1px rgb(19, 19, 19);
-}
-/* hacer hover a un elemento y aplicar efecto sobre otro elemento*/
-/*tutorial https://www.youtube.com/watch?v=UeQyNsX-23E*/
-
-aside {
-  grid-area: lateral;
-  background-color: var(--color-contraste);
-  margin-left: 0.5rem;  
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction:column;
-  align-content: center;
-  justify-content: space-between;
-
-}
-.asideBanner{
-  background-color: var(--color-traslucido);
-  height: 23%;
-  border-radius: 0.3rem;
-  transition: 0.5s;
-  /*padding:1rem;*/
-  
-}
-.asideBanner .bannerImg{
-  filter: none;
-}
-.asideBanner .txtBanner h2{
-  color:var(--color-texto);
-  font-size: 3rem;
-  font-weight: 900;
-  text-shadow: 3px 3px 1px var(--color-principal); 
-  /*text-shadow: 3px 3px 1px rgb(19, 19, 19);*/
-}
-.asideBanner:hover{
-  transform: scale(1.02); 
-  transition: 0.5s;  
-  box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
-}
-footer {
-  grid-area: rodapie;
-  
-}
-.cooperativas{
-  width: 70%;
-  margin:0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1.5rem;
-}
-.coopCard{
-  width: 15rem;
-  text-align: center;
-  
-}
-.coopCard a {
-  text-decoration: none;
-  color:var(--color-texto)
-}
-.coopCard a img{
-  padding: 1rem;
-  font-size: 1.2rem;
-}
-footer h5{
-  font-size: 1.2rem;
-  font-weight: 700;
-}
 main {
-  width: 99.3%;
+  width: 99.5%;
   height: auto;
   max-height: 82rem;
   overflow-y: auto;
@@ -281,126 +122,12 @@ main {
   border-radius: 10px;  
 }
 
-/*ESTILOS DE LA PAGINA INDEX*/
+/*ESTILOS DE LA PAGINA INDEX generado como partial scss**/
+/* ESTILO DE LA PAGINA pUNTOS RECOLECCION  generado como partial scss*/
 
 
-.historiaHub{
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: 
-  "titulo titulo"
-  "foto textof"
-  "texto texto";
-  column-gap: 1.5rem;
-}
-.historiaTitulo{
-  grid-area: titulo;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
-}
-.historiaImg{
-  grid-area: foto;
-  width:100%; 
-  height: 22.5rem;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
-}
- 
-.historiaImgCover {
-  /* en 1398px pierde la linea con el segundo py la recupera en 992 con @mediaScreen y se rompe debajo de los 400px*/
-  object-fit: cover;
-  object-position: 0 0;
-  width:100%;
-  height: 100%;
-  min-height: 25rem; 
-  position: relative;
- }
-.historiaTxt1{
-  grid-area: textof;
-}
-.historiaTxt2{
-  grid-area: texto;
-}
+/* ESTILO DE LA PAGINA GUIA DE SEPARACION  no logré que funcione como scss*/
 
-/* ESTILO DE LA PAGINA pUNTOS RECOLECCION*/
-/*estilos tarjetas*/
-.puntosCards{
-padding-top: 2.5rem;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;  
-justify-content: space-evenly;
-}
-.cardModal{
-margin: 1rem; 
-}
-.inactivo{
-filter: grayscale(100%);
-}
-
-.cardModal a{
-color:var(--color-texto);
-text-decoration: none;
-background-color: var(--color-principal);
-border-radius: 2rem;
-}
-.tarjeta{
-background-color:  var(--color-principal);
-width: 22rem;
-height:32rem; 
-
-}
-.tarjetaImgTop{
-width: 75%;
-padding:auto 0;
-}
-
-.tarjetaTitulo{
-font-size: 2.5rem;
-}
-.tarjetaSubtitulo{
-font-size: 1.2rem;
-}
-.tarjetaTexto{
-font-size: 1.6rem;
-}
-/* .cardModal:hover{
-transform: scale(1.02); 
-transition: 0.5s;  
-box-shadow: 0.5rem 0.8rem 1.2rem #1d1d1d;
-} */
-
-/*Estilos Modal*/
-.sizeModal{
-width: 60%;
-max-width: none;
-}
-.contenidoModal{
-background-color: var(--color-principal);
-flex-direction: row;
-}
-/* .modalCarrousel{
-background-color: orchid;
-} */
-
-.carrouselImg {
-object-fit: cover;
-width:100%;
-height: 100%;
-min-height: 25rem; 
-position: relative;
-}
-/* .modalInfo{
-background-color: #F0A202;
-} */
-
-/* ESTILO DE LA PAGINA GUIA DE SEPARACION */
-/* .contenidoMaterial{
-
-} */
 .materialImg{
 display: flex;
 flex-direction: column;
@@ -419,46 +146,8 @@ text-transform: uppercase;
   }
 
 
-
-/* */
-/* ESTILO DE LA PAGINA COMUNIDAD */
-
-
-.accoridionComunidad{
-  padding-top: 1.5rem;
-}
-
-.botonAcordeon{
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.botonAcordeon:focus {
-    border-color: var(--color-contraste);
-    box-shadow: 0 0 0 0.25rem var(--color-contraste-traslucido);
-}
-.botonAcordeon:not(.collapsed) {
-    color: var(--color-texto);
-}
-.botonAcordeon::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  
-}
-.botonAcordeon:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231d1d1d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-/* para cambiar el color del icono se debe modificar el codigo hex en el link despues de fill='%23
-ejemplo fill='%231d1d1d'%3e%3cpath  es un color gris, fill='%23ff00ff'%3e%3cpath  es color fuxia */ 
-
-
-.itemAcordeon .botonAcordeon {
-  background-color: var(--color-principal);
-}
-.itemAcordeon .botonAcordeon:not(.collapsed) {
-  background-color: var(--color-contraste);
-}
-
-
-/* ESTILO DE LA PAGINA CONTACTO*/
+/* ESTILO DE LA PAGINA COMUNIDAD  generado como partial scss*/
+/* ESTILO DE LA PAGINA CONTACTO   generado como partial scss*/
 
 
 @media screen and (max-width:13999px) {

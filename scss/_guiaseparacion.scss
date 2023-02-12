@@ -1,3 +1,5 @@
+/* no funciona, el estilo queda en style.css
+
 .materiales{
     display: flex;
     flex-direction: column;
@@ -15,7 +17,7 @@
                         background-color:$color-principal;
                         border-color: $color-principal $color-principal $color-texto;
                     }
-                    &:hover, &:focus{ /* este estilo no se esta aplicando, ver que pasa*/
+                    &:hover, &:focus{ 
                         color: $color-principal;
                         font-weight: bold;
                     }                    
@@ -23,13 +25,13 @@
                 
             }
         }
-        /* .tabContent{
+         .tabContent{
             .tabPane{
                 .tituloMaterial{}
                 .contenidoMaterial{}
                 .materialInfo{}
             }
-        } */
+        } 
 
     }
-}
+} */

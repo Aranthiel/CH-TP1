@@ -12,6 +12,9 @@ $fuente-titulos:  'Cabin', 'Actor', sans-serif;
 $fuente-proyecto:  'Didact Gothic', sans-serif;
 $fuente-otra:  'Poppins', sans-serif;
 
+$box-shadow-oscuro: 0.5rem 0.8rem 1.2rem $color-principal;
+$box-shadow-claro: 0 0 0 0.25rem $color-contraste-traslucido;
+
 * {
   box-sizing: border-box;
   /* calcula automaticamente paRA QUE NO HAYA SCROLL HORIZONTAL*/
@@ -83,7 +86,7 @@ $fuente-otra:  'Poppins', sans-serif;
       }
 
       main {
-        width: 99.3%;
+        width: 99.5%;
         height: auto;
         max-height: 82rem;
         overflow-y: auto;
