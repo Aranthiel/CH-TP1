@@ -134,6 +134,10 @@ header {
           color: #5FA429;
           background-color: #1d1d1d; }
 
+@media screen and (max-width: 1279px) {
+  header .barraNav .contenedorFluido .menu .menuNav {
+    align-items: flex-end; } }
+
 @media screen and (max-width: 768px) {
   header .barraNav .contenedorFluido .menu .menuNav {
     align-items: flex-end; } }
