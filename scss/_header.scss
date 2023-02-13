@@ -56,7 +56,7 @@ header{
 }
 
 
-@media screen and (max-width:1279px){
+@media screen and (max-width:1199px){/* por configuracion de boostrap, el breackpoint esta en 1200 para que se oculte el menu*/
     header{
         .barraNav {
              .contenedorFluido{

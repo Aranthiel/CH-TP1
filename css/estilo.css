@@ -134,7 +134,8 @@ header {
           color: #5FA429;
           background-color: #1d1d1d; }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1199px) {
+  /* por configuracion de boostrap, el breackpoint esta en 1200 para que se oculte el menu*/
   header .barraNav .contenedorFluido .menu .menuNav {
     align-items: flex-end; } }
 
