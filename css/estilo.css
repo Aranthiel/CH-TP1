@@ -134,6 +134,10 @@ header {
           color: #5FA429;
           background-color: #1d1d1d; }
 
+@media screen and (max-width: 768px) {
+  header .barraNav .contenedorFluido .menu .menuNav {
+    align-items: flex-end; } }
+
 .seccionbanner {
   grid-area: banner;
   background-color: #D6E8C8;
@@ -342,6 +346,16 @@ footer {
         color: #1d1d1d; }
         .historiaHub .historiaTxt2 .InfoSource .fuente:hover {
           color: #5FA429; }
+
+@media screen and (max-width: 768px) {
+  .historiaHub {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "titulo " "foto" "textof" "texto"; }
+    .historiaHub .historiaImg {
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 2rem; } }
 
 /* no funciona, el estilo queda en style.css
 
