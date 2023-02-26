@@ -414,10 +414,10 @@ footer {
       border-radius: 2rem; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta {
         background-color: #5FA429;
-        width: 25rem;
-        height: 35rem; }
+        width: 20rem;
+        height: 28rem; }
         .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .tarjeta .tarjetaImgTop {
-          width: 50%;
+          width: 75%;
           margin: 1rem;
           border-radius: 50%; }
       .puntosAcopio .contenedorPuntos .puntosCards .cardModal a .card-body .tarjetaTitulo {
