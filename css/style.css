@@ -22,7 +22,12 @@
 .materialImg{
 display: flex;
 flex-direction: column;
+
 }
+.fotoMaterial {
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+} 
 .tabNavLink{
 color:var(--color-texto);
 text-transform: uppercase;
