@@ -27,6 +27,7 @@ flex-direction: column;
 .fotoMaterial {
   margin-bottom: 3.5rem;
   margin-top: 1rem;
+  
 } 
 .tabNavLink{
 color:var(--color-texto);
@@ -41,8 +42,31 @@ text-transform: uppercase;
   border-color: var(--color-principal) var(--color-principal) var(--color-texto);
   }
 
+.tituloMaterial{    
+  margin:1rem auto 0 auto;
+}
+.tituloMaterial h2{
+  font-size: 3.5rem;
+  text-align: center;
+}
 
-/* ESTILO DE LA PAGINA COMUNIDAD  generado como partial scss*/
+@media screen and (max-width:767px){
+  .materialImg{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .fotoMaterial {
+    height: 14rem; 
+    margin-bottom: 1.5rem;       
+    overflow: hidden;
+    
+    
+  } 
+}
+
+
+
+  /* ESTILO DE LA PAGINA COMUNIDAD  generado como partial scss*/
 /* ESTILO DE LA PAGINA CONTACTO   generado como partial scss*/
 
 
